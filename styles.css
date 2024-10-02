@@ -1,0 +1,726 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px; /* adjusted padding for demonstration */
+    transition: 0.5s ease;
+    background-color: #DED0B6; 
+    
+}
+
+header .brand {
+    color: black;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items a{
+    position: relative;
+    color: black;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    margin-left: 30px; /* adjusted margin for demonstration */
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background-color: #D6C7AE;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navigation .navigation-items a:hover::before {
+    width: 100%;
+    background-color: rgb(175, 164, 164);
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.home:before{
+    z-index: 777;
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    max-width: 600px; 
+    z-index: 888;
+    margin-top: 50px;
+}
+
+
+.content h1 {
+        color: white;
+        font-family: "Protest Revolution", sans-serif;
+        font-size: 3.0em;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-bottom: 40px;
+    
+    
+}
+
+.content h2 {
+    color: white;
+    
+    font-size: 1.9em; 
+    font-weight: 600;
+    margin-bottom:10px ;
+}
+
+.content p {
+    color: white;
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 1.1rem; 
+    margin-bottom: 65px;
+}
+
+.content button{
+    background-color: white;
+    padding: 14px 40px 14px 40px;
+    color: black;
+    border: 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.content button:hover {
+    background-color: #D0B8A8; /* Change to the desired hover background color */
+    color: black; /* Change to the desired hover text color */
+}
+
+.home video{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.banner {
+    height: 150px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    padding: 50px 0;
+  }
+  
+  .banner-content h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+
+  .banner-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+
+
+  /* collection section */
+
+  #page2 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+
+#page2 .elem {
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+#page2 .elem img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+
+#page2 .elem .dets {
+  height: 40px;
+  border-radius: 50px;
+  width: 50%;
+  position: absolute;
+  z-index: 9;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #E2C799;
+  display: flex;
+ opacity: 1;
+ align-items: center;
+ justify-content: center;
+ transition: opacity 0.3s, height 0.3s;
+ 
+}
+
+
+#page2 .elem:hover .dets{
+  opacity: 1;
+  height: 200px;
+  width: 300px;
+}
+
+
+
+
+
+
+.elem {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.elem .dets {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.related-products {
+  display: none; /* Initially hide the related products */
+}
+
+.elem:hover .related-products {
+  display: table; /* Show related products on hover */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.related-product {
+  display: table-cell;
+  text-align: center;
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.related-product img {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 5px; /* Adjust margin as needed */
+  transition: opacity 0.3 ease;
+  object-fit: cover;
+  
+}
+
+.related-product:hover img{
+  opacity: 0.8;
+}
+
+
+.related-description {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* offer section */
+
+
+
+
+/*
+.offer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  row-gap: 3.5rem;
+  flex-direction: row;
+ 
+}
+
+
+
+.offer-content {
+  
+  padding: 50px;
+  color: #fff; 
+  background-color: #333; 
+  flex: 1;
+
+
+  }
+  
+
+
+.offer-content .offer-subtitle {
+  margin-bottom: 10px;
+ 
+ 
+}
+
+.offer-content .offer-subtitle .span {
+  font-weight: bold;
+ 
+  
+}
+
+.offer-content .offer-subtitle .badge {
+  color: #fff;
+  background-color: #CD8D7A; 
+  padding: 5px 10px;
+  border-radius: 5px;
+ 
+  
+}
+
+.offer-content .section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  
+}
+
+.offer-content .section-text {
+  margin-bottom: 20px;
+  
+}
+
+
+.launch-time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.launch-time > div {
+  text-align: center;
+  
+}
+
+.launch-time p, .launch-time span {
+  margin-bottom: 5px;
+  
+}
+
+.offer img {
+
+  width: 40%; 
+  height: auto;
+  object-fit: cover;
+  margin-left: auto;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #CD8D7A; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background-color: #CD8D7A;
+  
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+  font-size: 1.5rem;  Increase font size for time display 
+  font-weight: bold; 
+  
+}
+*/
+.offer {
+  background-color: #f8f8f8;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.offer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.offer-image {
+  margin-right: 20px;
+}
+
+.offer-image img {
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.offer-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.offer-subtitle {
+  font-size: 20px;
+  color: #333;
+}
+
+.offer-subtitle .badge {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.launch-time {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.launch-time div {
+  margin-right: 20px;
+}
+
+.launch-time div:last-child {
+  margin-right: 0;
+}
+
+.launch-time p {
+  font-size: 24px;
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+
+/** Customize **/
+
+
+/*button:hover {
+  background-color: #222;
+}
+*
+.design-your-jewelry {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+}
+
+.design-your-jewelry h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+#engraving-preview {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+#design-form {
+  background-color: #fff;  
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 50%;
+  
+}
+
+#design-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#design-form select, #design-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #E3E1D9;
+  border-radius: 5px;
+}
+
+#design-form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#design-form button:hover {
+  background-color: #555;
+}
+*/
+
+
+.design-your-jewelry {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+}
+
+.design-your-jewelry h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.product-image {
+  margin-bottom: 20px;
+}
+
+.product-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+#engraving-preview {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+#design-form {
+  background-color: #fff; /* Background color for the form */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 50%;
+}
+
+#design-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#design-form select, #design-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#design-form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#design-form button:hover {
+  background-color: #555;
+}
+
+
+
+
+footer {
+  background-color: #B3A398; /* Background color */
+  color: #fff; /* Text color */
+  padding: 20px; /* Padding around content */
+  text-align: center; /* Align text to center */
+  
+}
+
+.footer-content {
+  max-width: 960px; /* Limit content width */
+  margin: 0 auto; /* Center content horizontally */
+}
+
+.footer-content p {
+  margin: 5px 0; /* Adjust spacing between paragraphs */
+}
+
+
+/*  Product Card */
+
+.page-heading {
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.product-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 -10px; /* Adjust margin to prevent overflow */
+}
+
+.product-card {
+  width: calc(33.33% - 20px); 
+  max-width: 300px;
+  flex: 1 0 auto;
+  margin: 20px 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.product-card h2 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.product-card p {
+  margin: 0 0 10px;
+  color: #666;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #333;
+}
+
+.product-card button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #555;
+}
