@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jewelry Cart</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../imgs/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust the opacity of the background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px; /* Increase the font size */
+    color: #333; /* Darken the text color */
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px; /* Increase padding for better spacing */
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.cart-table th {
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+.cart-item img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the images */
+}
+
+.total-row {
+    font-weight: bold;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+.checkout-btn:hover {
+    background-color: #555;
+}
+
+</style>
+</head>
+<body>
+
+<div class="cart-container">
+    <h2 class="cart-header">Your Jewelry Cart</h2>
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            %HTML%
+        </tbody>
+        <tfoot>
+            <tr class="total-row">
+                <td colspan="2">Total:</td>
+                <td>%TOTAL%$</td>
+            </tr>
+        </tfoot>
+    </table>
+    <a href="#" class="checkout-btn">Proceed to Checkout</a>
+</div>
+
+</body>
+</html>
